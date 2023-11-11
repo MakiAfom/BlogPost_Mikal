@@ -1,0 +1,66 @@
+<div class="author">
+  <h1 class="authorHeading">WELCOME TO THIS BLOG</h1>
+  <p class="authorBody">
+    This webpage will provide a briefing about Mitads and modern technology.
+  </p>
+</div><img src="C:\Users\user\Desktop\Screenshot (53).png" alt="Enjera Baking" class="ingera-making" height="100%"
+  width="100%">
+
+<section class="articlesImages">
+  <h2 class="articleImageHeading">Latest Posts</h2>
+  <ul class="articles_ul">
+    // the data is list of array in my blog model//
+    <% data.forEach(blogModel=> { %>
+      <li>
+        <a href="/blogmodel/<%= blogModel._id %>">
+          <span>
+            <%= blogModel.title %>
+          </span>
+          <span class="articleListDate">
+            <%= blogModel.createdAt.toLocaleDateString() %>
+          </span>
+          <div class="image-container">
+            <img src="<%= blogModel.author.imageSource %>" class="image" alt="<%= blogModel.title %>">
+          </div>
+        </a>
+      </li>
+      <% }); %>
+
+
+  </ul>
+
+  <% if (nextPage !==null) { %>
+    <a href="/?page=<%=  nextPage %>" class="pagination">&lt; View Older Posts</a>
+
+    <% } %>
+
+       <!-- </li>
+
+          //       <li>
+          //           <a href="#">
+          //               <span>Post Title</span>
+          //               <span class="articleListDate">Date</span>
+          //               <div class="image-container">
+          //                   <img
+          //                       src="https://www.example.com/your-image-2.jpg"
+          //                       class="image"
+          //                       alt="exampleImg"
+          //                   >
+          //                   </div>
+          //           </a>
+          //       </li>
+
+          //       <li>
+          //           <a href="#">
+          //               <span>Post Title</span>
+          //               <span class="articleListDate">Date</span>
+          //               <div class="image-container">
+          //                   <img
+          //                       src="https://www.example.com/your-image-3.jpg"
+          //                       class="image"
+          //                       alt="exampleImg" />
+          //               </div>
+          //           </a>
+          //       </li>
+          //   </ul> -->
+</section>

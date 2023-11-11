@@ -1,0 +1,31 @@
+.register_form {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content:center;
+    gap:10px
+}
+
+button {
+    width:120px;
+    margin:20px;
+    padding:4px 10px;
+    border-radius: 8px;
+    border:1px solid #333
+
+}
+label {
+    display:block;
+}
+form  {
+    margin:40px auto;
+    width:25%
+}
+header {
+    text-align: center;
+    
+}
+input {
+    outline: none;
+    padding:4px
+}

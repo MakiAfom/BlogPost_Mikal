@@ -1,0 +1,25 @@
+<header class="header">
+    <h2 class="logo"><a href="MikalBlog">Mikal Blog</a></h2>
+    <nav class="navigation">
+        <a href="/">Home</a>
+
+        <!-- <button class="btn login-popup">Login</button> -->
+        
+        <!-- <button class="btn Registration-popup">Registration</button> -->
+       
+
+        <% if (!isLoggedIn) { %>
+            <a href="/login" type='button'>Login</a>
+            <a href="/register" type="button">Register</a>
+          <% } %>
+          <% if (isLoggedIn) { %>
+            <a href="/logout" type='button'>Logout</a>
+            
+          <% } %>
+
+    </nav>
+    
+    
+
+
+</header>

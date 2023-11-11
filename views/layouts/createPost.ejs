@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+  
+    </title>
+    <meta name="description" content="<%= locals.description %>">
+    <link rel="stylesheet" href="/register.css">
+  </head>
+
+  <body>
+  
+
+    <form action="/blogs" method="post" class="register_form">
+      <header> <h2> Please Create  A Post </h2></header>
+      <div class="form_group"> <label>Title:</label>
+        <input type="text" name="title" /></div>
+
+        <div class="form_group"> <label>Author:</label>
+            <input type="text" name="author" /></div>
+     
+<div class="form_group"> <label>Content:</label>
+    <textarea  name="content" rows="4" cols="50"></textarea>
+  </div>
+     
+  
+      
+<div class="form_group"><label>Image :</label>
+  <input type="file" name="imageUrl" /></div>
+      
+    
+<button type="submit">Create</button>
+</form>
+
+</body>
+
+</html>
+

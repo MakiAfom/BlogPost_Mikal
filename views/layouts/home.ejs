@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog Posts</title>
+        <link rel="stylesheet" href="/file.css">
+    </head>
+
+    <body>
+        <%- include('../partials/search.ejs') %>
+            <div class="container">
+                <%- include('../partials/header.ejs', {isLoggedIn}) %>
+                    <main class="main">
+                        <% if (isLoggedIn) { %>
+                            <a  class="create_post" href="/createPost"> Create Post</a>
+                          <% } %>
+                        <div class="posts" >
+                        <% data.forEach(blog=> { %>
+                            <div class="post">
+                                <div class="image">
+                                    <img src="<%= blog.imageSource %>">
+                                </div>
+                                <div class="texts">
+                                    <h2 class="title">
+                                        <%= blog.title %> 
+                                    </h2>
+                                    <p class="info">
+                                        <a class="author">
+                                            <%= blog.author.name %>
+                                        </a>
+                                        <time>
+                                            <%= new Date(blog.createdAt).toLocaleDateString("en-US") %>
+                                        </time>
+                                    </p>
+                                    <p class="summary">
+                                        <%= blog.content %>
+                                    </p>
+                                </div>
+                                <a class="read_more" href="/blogs/<%= blog.id %>">Read More</a>
+                            </div>
+                            <% }); %>
+                        </div>
+                    </main>
+                    
+                    <%- include('../partials/footer') %>
+            </div>
+    </body>
+
+</html>

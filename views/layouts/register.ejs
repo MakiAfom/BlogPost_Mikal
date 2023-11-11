@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+  
+    </title>
+    <meta name="description" content="<%= locals.description %>">
+    <link rel="stylesheet" href="/register.css">
+  </head>
+
+  <body>
+  
+
+    <form action="/register" method="post" class="register_form">
+      <header> <h2> Please Create Account</h2></header>
+      <div class="form_group"> <label>Name:</label>
+        <input type="text" name="username"  /></div>
+     
+<div class="form_group"> <label>Email:</label>
+  <input type="text" name="email"  /></div>
+     
+  <div class="form_group"><label>Password:</label>
+    <input type="password" name="password" /></div>
+      
+<div class="form_group"><label>Avatar:</label>
+  <input type="file" name="avatar" /></div>
+      
+    
+<button type="submit">Register</button>
+</form>
+
+</body>
+
+</html>
+
